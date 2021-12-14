@@ -1,0 +1,17 @@
+F4F-4-C
+Plane/F4F-4-C.png
+F4F-4-C
+
+Name: F4F-4 Community
+Type: Carrier-based fighter
+Crew: 1
+Length: 28'9" (8.76 m)
+Wing span: 38'0" (11.58 m)
+Height: 11'10" (3.61 m)
+Wing area: 260ft^2 (24 m^2)
+Empty weight: 4,907 lb (2,226 kg)
+Gross weight: 7,423 lb (3,367 kg)
+Powerplant: Pratt & Whitney R-1830-76
+
+Armament: 
+- 6 x 0.50 in (12.7 mm) AN/M2 Browning machine guns

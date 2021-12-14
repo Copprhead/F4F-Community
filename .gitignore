@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/F4F-4-C/bin/F4F-4-C.pdb
+/F4F-4-C/bin/F4F-4-C.lib
+/F4F-4-C/bin/F4F-4-C.ipdb
+/F4F-4-C/bin/F4F-4-C.iobj
+/F4F-4-C/bin/F4F-4-C.exp
+/F4F-4-C/ExternalFM/FM/Debug
+/F4F-4-C/ExternalFM/FM/Release
+/F4F-4-C/ExternalFM/FM/x64/Release
+/F4F-4-C/ExternalFM/Generate_Control_Headers/Debug
+/F4F-4-C/ExternalFM/UnitTests/Debug
+/F4F-4-C/Shapes/F4F-4-C_Propeller.fbx
+/F4F-4-C/Shapes/F4F-4-C_Cockpit.edm
+/F4F-4-C/Shapes/F4F-4-C.edm
+/F4F-4-C/Textures/f4f_common.zip
+/F4F-4-C/bin/F4F-4-C.dll
+/F4F-4-C/ExternalFM/.vs/F4F-4-C/v16
