@@ -12,8 +12,10 @@ join(res.keyCommands,{
     
     -- Canopy Control
     {combos = {{key = 'C', reformers = {'LCtrl'}}}, down = iCommandPlaneFonar, name = _('Canopy Open/Close'), category = {_('Left Console')}},
-    {combos = {{key = 'W', reformers = {'LCtrl'}}}, down = Keys.FoldingWing, name = _('Wing Fold/Unfold'), category = {_('Left Console')}},
-    	
+        
+    {combos = {{key = 'W', reformers = {'LCtrl'}}}, down = Keys.FoldWings, name = _('Fold Wings'), category = {_('Left Console')}},
+    {combos = {{key = 'W', reformers = {'LShift'}}}, down = Keys.UnfoldWings, name = _('Unfold Wings'), category = {_('Left Console')}},
+
     ---------------------------------------------
     -- Communitcations -------------------------
     --------------------------------------------- 

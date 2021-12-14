@@ -22,9 +22,6 @@ namespace Scooter
 
 enum Control
 {
-	FOLDING_WING_TOGGLE = 73,
-
-
 	//Axis
 	PITCH = 2001, //Stick pitch axis
 	ROLL = 2002, //Stick roll axis
@@ -82,6 +79,9 @@ enum Control
 	//If the comms menu is changed these need to be found again.
 	LOCK_SLATS_RADIO_MENU = 966,
 	UNLOCK_SLATS_RADIO_MENU = 967,
+
+	FOLD_WINGS = 968,
+	UNFOLD_WINGS = 969,
 };
 
 class Input : public BaseComponent
@@ -112,6 +112,8 @@ public:
 		m_hook = false;
 		m_nosewheelSteering = false;
 		m_starter = false;
+
+		m_foldingWing = 0.0;
 
 		m_pitchAxis.zeroInit();
 		m_rollAxis.zeroInit();
@@ -289,6 +291,14 @@ public:
 	{
 		return m_starter;
 	}
+	inline const double& foldingWing() const
+	{
+		return m_foldingWing;
+	}
+	inline double& foldingWing()
+	{
+		return m_foldingWing;
+	}
 
 	inline Axis& pitchAxis()
 	{
@@ -341,6 +351,8 @@ private:
 	double m_throttle = 0.0;
 	double m_brakeLeft = 0.0;
 	double m_brakeRight = 0.0;
+
+	double m_foldingWing = 0.0;
 
 	double m_FFBPitchFactor = 1.0;
 	double m_FFBPitchAmplitude = 0.0;

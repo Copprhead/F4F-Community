@@ -440,8 +440,13 @@ void ed_fm_set_command
 {
 	switch (command)
 	{
-	case Scooter::Control::FOLDING_WING_TOGGLE:
-		s_airframe->setFoldingWingPosition(-s_airframe->getFoldingWingPosition());
+	case Scooter::Control::FOLD_WINGS:
+		s_input->foldingWing() = 1.0;
+		LOG("FOLD_WINGS\n");
+		break;
+	case Scooter::Control::UNFOLD_WINGS:
+		s_input->foldingWing() = 0.0;
+		LOG("UNFOLD_WINGS\n");
 		break;
 	case Scooter::Control::PITCH:
 		s_input->pitch( value );

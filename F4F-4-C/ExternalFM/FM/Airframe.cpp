@@ -131,6 +131,19 @@ void Scooter::Airframe::airframeUpdate(double dt)
 		m_hookPosition = std::max(m_hookPosition, 0.0);
 	}
 
+	if (m_controls.foldingWing())
+	{
+		m_foldingWingPosition += dt / m_foldingWingExtendTime;
+		m_foldingWingPosition = std::min(m_foldingWingPosition, 1.0);
+	}
+	else
+	{
+		m_foldingWingPosition -= dt / m_foldingWingExtendTime;
+		m_foldingWingPosition = std::max(m_foldingWingPosition, 0.0);
+	}
+
+
+
 	//printf("LEFT: %lf, CENTRE: %lf, RIGHT: %lf, INTERNAL: %lf\n", m_fuel[Tank::LEFT_EXT], m_fuel[Tank::CENTRE_EXT], m_fuel[Tank::RIGHT_EXT], m_fuel[Tank::INTERNAL]);
 	//m_engine.setHasFuel(m_fuel[Tank::INTERNAL] > 20.0);
 

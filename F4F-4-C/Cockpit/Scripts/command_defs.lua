@@ -5,8 +5,9 @@ Keys =
 	PlaneFireOn		= 84,
 	PlaneFireOff	= 85,
 
-	Canopy                          = 71,
-	FoldingWing                     = 73,
+	Canopy = 71,
+	FoldWings = 968,
+	UnfoldWings = 969,
 }
 
 start_command   = 3000
