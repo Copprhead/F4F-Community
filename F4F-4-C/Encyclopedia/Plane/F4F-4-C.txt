@@ -11,7 +11,9 @@ Height: 11'10" (3.61 m)
 Wing area: 260ft^2 (24 m^2)
 Empty weight: 4,907 lb (2,226 kg)
 Gross weight: 7,423 lb (3,367 kg)
-Powerplant: Pratt & Whitney R-1830-76
+Powerplant: 1,200 hp air-cooled radial engine
 
 Armament: 
 - 6 x 0.50 in (12.7 mm) AN/M2 Browning machine guns
+- 2 x 100 lb bombs
+- 2x 58 US gal drop tanks
