@@ -5,4 +5,5 @@ F4F Community Module for DCS World
 - https://github.com/heclak/community-a4e-c
 - https://github.com/luizrenault/a-29b-community
 - RedBeard2 https://forums.eagle.ru/topic/97337-beginners-guide-to-dcs-world-aircraft-mods/
-- 3D Model by Carlo Cestra, licensed under "Royalty Free License"
+- Aircraft external and cockpit model by Carlo Cestra, licensed under "Royalty Free License"
+- Pilot model by Max Grueter, licensed under "General Model License"
