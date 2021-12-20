@@ -120,7 +120,7 @@ F4F_4_C =  {
 	has_speedbrake 				= false, -- Speedbrake yes/no
 	has_differential_stabilizer	= false, -- differential stabilizers
 	
-	main_gear_pos 				= { 0.77, -1.9 + 0.150, 0.9},
+	main_gear_pos 				= { 0.77, -1.9 + 0.2, 0.9},
 	nose_gear_pos 				= {-4.5, -0.825 + 0.100, 0.0},  
 	tand_gear_max 				= 0.577,
 	wing_area 					= 24, -- wing area in m2

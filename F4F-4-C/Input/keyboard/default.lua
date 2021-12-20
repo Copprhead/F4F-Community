@@ -16,6 +16,12 @@ join(res.keyCommands,{
     {combos = {{key = 'W', reformers = {'LCtrl'}}}, down = Keys.FoldWings, name = _('Fold Wings'), category = {_('Left Console')}},
     {combos = {{key = 'W', reformers = {'LShift'}}}, down = Keys.UnfoldWings, name = _('Unfold Wings'), category = {_('Left Console')}},
 
+    {combos = {{key = 'G', reformers = {'LShift'}}}, down = Keys.GearUp, name = _('Gear Up'), category = {_('Left Console')}},
+    {combos = {{key = 'G', reformers = {'LCtrl'}}}, down = Keys.GearDown, name = _('Gear Down'), category = {_('Left Console')}},
+    
+    {combos = {{key = 'F', reformers = {'LShift'}}}, down = Keys.FlapsUp, name = _('Flaps Up'), category = {_('Left Console')}},
+    {combos = {{key = 'F', reformers = {'LCtrl'}}}, down = Keys.FlapsDown, name = _('Flaps Down'), category = {_('Left Console')}},
+   
     ---------------------------------------------
     -- Communitcations -------------------------
     --------------------------------------------- 

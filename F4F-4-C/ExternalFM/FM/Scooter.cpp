@@ -438,6 +438,8 @@ void ed_fm_set_command
 	float value
 )
 {
+	double gearState = 0.0;
+
 	switch (command)
 	{
 	case Scooter::Control::FOLD_WINGS:
@@ -448,6 +450,25 @@ void ed_fm_set_command
 		s_input->foldingWing() = 0.0;
 		LOG("UNFOLD_WINGS\n");
 		break;
+	case Scooter::Control::FLAPS_DOWN:
+		s_input->flaps() = 1.0;
+		LOG("FLAPS_DOWN\n");
+		break;
+	case Scooter::Control::FLAPS_UP:
+		s_input->flaps() = 0.0;
+		LOG("FLAPS_UP\n");
+		break;
+	case Scooter::Control::GEAR_DOWN:
+		gearState = s_input->gear() + 0.035;
+		s_input->gear() = std::min(gearState, 1.0);
+		LOG("GEAR_DOWN\n");
+		break;
+	case Scooter::Control::GEAR_UP:
+		gearState = s_input->gear() - 0.035;
+		s_input->gear() = std::max(gearState, 0.0);
+		LOG("GEAR_UP\n");
+		break;
+
 	case Scooter::Control::PITCH:
 		s_input->pitch( value );
 		break;
@@ -680,6 +701,7 @@ void ed_fm_set_draw_args (EdDrawArgument * drawargs,size_t size)
 		drawargs[616].f = drawargs[5].f;
 	}
 
+	// Wings
 	drawargs[FOLDING_WING].f = s_airframe->getFoldingWingPosition();
 
 	// Prop state

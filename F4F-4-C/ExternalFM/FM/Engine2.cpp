@@ -217,9 +217,9 @@ void Scooter::Engine2::updateEngine( double dt )
 	//printf( "Factor: %lf\n", factor );
 	m_correctedFuelFlow = m_fuelFlow * factor;
 
-	//if (getRPMNorm() > 0)
+	if (getRPMNorm() > 0)
 	{
-		double propStep = 0.1 * getRPMNorm();
+		double propStep = 0.025 * getRPMNorm();
 		m_propellerState =  std::fmod(m_propellerState + propStep, 1);
 	}
 }

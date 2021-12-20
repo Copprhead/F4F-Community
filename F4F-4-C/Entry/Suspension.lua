@@ -23,8 +23,8 @@ nose_wheel_moment_of_inertia 				= 0.6
 
 --MAINGEAR2
 main_amortizer_min_length 					= 0.00
-main_amortizer_max_length 					= 0.67 --0.7
-main_amortizer_basic_length 				= 0.67 --0.7
+main_amortizer_max_length 					= 1.2 --0.7
+main_amortizer_basic_length 				= 1.2 --0.7
 --This is the length over which the amortizer will reduce. Smaller values mean higher ride height, larger values lower ride height.
 main_amortizer_reduce_length 				= 28.0  --yes you read that right, 28 metres.
 

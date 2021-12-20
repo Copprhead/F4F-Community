@@ -104,16 +104,28 @@ void Scooter::Airframe::zeroInit()
 void Scooter::Airframe::coldInit()
 {
 	zeroInit();
+
+	m_gearNPosition = 1.0;
+	m_gearLPosition = 1.0;
+	m_gearRPosition = 1.0;
 }
 
 void Scooter::Airframe::hotInit()
 {
 	zeroInit();
+
+	m_gearNPosition = 1.0;
+	m_gearLPosition = 1.0;
+	m_gearRPosition = 1.0;
 }
 
 void Scooter::Airframe::airborneInit()
 {
 	zeroInit();
+
+	m_gearNPosition = 0.0;
+	m_gearLPosition = 0.0;
+	m_gearRPosition = 0.0;
 }
 
 void Scooter::Airframe::airframeUpdate(double dt)
@@ -142,6 +154,36 @@ void Scooter::Airframe::airframeUpdate(double dt)
 		m_foldingWingPosition = std::max(m_foldingWingPosition, 0.0);
 	}
 
+	if (m_controls.flaps())
+	{
+		m_flapsPosition += dt / m_flapDownTime;
+		m_flapsPosition = std::min(m_flapsPosition, 1.0);
+	}
+	else
+	{
+		m_flapsPosition -= dt / m_flapUpTime;
+		m_flapsPosition = std::max(m_flapsPosition, 0.0);
+	}
+
+
+	if (m_controls.gear() > m_gearLPosition || m_controls.gear() > m_gearRPosition || m_controls.gear() > m_gearNPosition)
+	{
+		m_gearLPosition += dt / m_gearExtendTime;
+		m_gearLPosition = std::min(m_gearLPosition, 1.0);
+		m_gearRPosition += dt / m_gearExtendTime;
+		m_gearRPosition = std::min(m_gearRPosition, 1.0);
+		m_gearNPosition += dt / m_gearExtendTime;
+		m_gearNPosition = std::min(m_gearNPosition, 1.0);
+	}
+	else if (m_controls.gear() < m_gearLPosition || m_controls.gear() < m_gearRPosition || m_controls.gear() < m_gearNPosition)
+	{
+		m_gearLPosition -= dt / m_gearExtendTime;
+		m_gearLPosition = std::max(m_gearLPosition, 0.0);
+		m_gearRPosition -= dt / m_gearExtendTime;
+		m_gearRPosition = std::max(m_gearRPosition, 0.0);
+		m_gearNPosition -= dt / m_gearExtendTime;
+		m_gearNPosition = std::max(m_gearNPosition, 0.0);
+	}
 
 
 	//printf("LEFT: %lf, CENTRE: %lf, RIGHT: %lf, INTERNAL: %lf\n", m_fuel[Tank::LEFT_EXT], m_fuel[Tank::CENTRE_EXT], m_fuel[Tank::RIGHT_EXT], m_fuel[Tank::INTERNAL]);

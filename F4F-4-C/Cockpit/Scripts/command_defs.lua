@@ -5,6 +5,12 @@ Keys =
 	PlaneFireOn		= 84,
 	PlaneFireOff	= 85,
 
+	FlapsDown = 145,
+	FlapsUp = 146,
+
+	GearUp = 430,
+	GearDown = 431,
+
 	Canopy = 71,
 	FoldWings = 968,
 	UnfoldWings = 969,

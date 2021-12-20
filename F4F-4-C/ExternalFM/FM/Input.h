@@ -114,7 +114,9 @@ public:
 		m_starter = false;
 
 		m_foldingWing = 0.0;
-
+		m_gear = 0.0;
+		m_flaps = 0.0;
+		
 		m_pitchAxis.zeroInit();
 		m_rollAxis.zeroInit();
 		m_yawAxis.zeroInit();
@@ -126,11 +128,16 @@ public:
 	virtual void coldInit()
 	{
 		zeroInit();
+
+		m_gear = 1.0;
 	}
 
 	virtual void hotInit()
 	{
 		zeroInit();
+
+
+		m_gear = 1.0;
 	}
 
 	virtual void airborneInit()
@@ -299,6 +306,23 @@ public:
 	{
 		return m_foldingWing;
 	}
+	inline const double& gear() const
+	{
+		return m_gear;
+	}
+	inline double& gear()
+	{
+		return m_gear;
+	}
+	inline const double& flaps() const
+	{
+		return m_flaps;
+	}
+	inline double& flaps()
+	{
+		return m_flaps;
+	}
+	
 
 	inline Axis& pitchAxis()
 	{
@@ -353,6 +377,8 @@ private:
 	double m_brakeRight = 0.0;
 
 	double m_foldingWing = 0.0;
+	double m_gear = 0.0;
+	double m_flaps = 0.0;
 
 	double m_FFBPitchFactor = 1.0;
 	double m_FFBPitchAmplitude = 0.0;

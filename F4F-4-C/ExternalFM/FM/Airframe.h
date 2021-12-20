@@ -384,7 +384,10 @@ private:
 	//Airframe Constants
 	const double m_hookExtendTime = 1.5;
 
-	const double m_foldingWingExtendTime = 10;
+	const double m_foldingWingExtendTime = 15;
+	const double m_gearExtendTime = 10;
+	const double m_flapDownTime = 3;
+	const double m_flapUpTime = 5;
 
 	//Airframe Variables
 	double m_gearLPosition = 0.0; //0 -> 1
