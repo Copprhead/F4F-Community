@@ -54,11 +54,17 @@ LogBook =
 	},	
 })
 
+-- External
 mount_vfs_liveries_path (current_mod_path.."/Liveries")
 mount_vfs_model_path	(current_mod_path.."/Shapes")
 mount_vfs_texture_path  (current_mod_path.."/Textures/f4f_common")
 
-dofile(current_mod_path.."/Entry/Suspension.lua")
+-- Cockpit
+mount_vfs_model_path	(current_mod_path.."/Cockpit/Shapes")
+mount_vfs_texture_path  (current_mod_path.."/Cockpit/Textures/f4f_cockpit")
+
+
+dofile(current_mod_path.."/Suspension.lua")
 local FM=
 {
 	[1] = self_ID,

@@ -1,9 +1,9 @@
 --EDITING THIS FILE WILL CAUSE THE EFM TO FAIL.
 --NOSEGEAR
 nose_amortizer_min_length 					= 0.00
-nose_amortizer_max_length 					= 0.25 --0.32
-nose_amortizer_basic_length 				= 0.25
-nose_amortizer_reduce_length 				= 0.01
+nose_amortizer_max_length 					= 0.01 --0.32
+nose_amortizer_basic_length 				= 0.01
+nose_amortizer_reduce_length 				= 0.005
 
 
 nose_amortizer_spring_force_factor 			= 3.0e+06
@@ -23,10 +23,10 @@ nose_wheel_moment_of_inertia 				= 0.6
 
 --MAINGEAR2
 main_amortizer_min_length 					= 0.00
-main_amortizer_max_length 					= 1.2 --0.7
-main_amortizer_basic_length 				= 1.2 --0.7
+main_amortizer_max_length 					= 0.25 --0.7
+main_amortizer_basic_length 				= 0.25 --0.7
 --This is the length over which the amortizer will reduce. Smaller values mean higher ride height, larger values lower ride height.
-main_amortizer_reduce_length 				= 28.0  --yes you read that right, 28 metres.
+main_amortizer_reduce_length 				= 0.125 --yes you read that right, 28 metres.
 
 -- F = kx^y, where x is the displacement from the default position (determined by the reduce length)
 --This is k in the above equation
@@ -88,7 +88,7 @@ suspension =
 		wheel_side_friction_factor 				= wheel_side_friction_factor_COMMON,--affects the abillity to slide in turns - decrease for better turning
 		wheel_roll_friction_factor 				= wheel_roll_friction_factor_COMMON,
 		wheel_glide_friction_factor 			= wheel_glide_friction_factor_COMMON,
-		wheel_damage_force_factor 				= 250.0,--/N/ 250 Su-25, damage to tires
+		wheel_damage_force_factor 				= 250.0*20,--/N/ 250 Su-25, damage to tires
 		wheel_damage_speed 						= 200.0,
 		wheel_brake_moment_max 					= 0.0,
 		wheel_moment_of_inertia					= nose_wheel_moment_of_inertia,
@@ -98,7 +98,7 @@ suspension =
 		damper_coeff 							= main_damper_coeff,
 
 		--damper_coeff = damper_coeff_tail_wheel,
-		--arg_post = 0,
+		arg_post = 0,
 		arg_amortizer 							= 1,
 		arg_wheel_rotation 						= 101,
 		arg_wheel_yaw 							= 2,
@@ -133,7 +133,7 @@ suspension =
 		wheel_side_friction_factor 				= wheel_side_friction_factor_COMMON,
 		wheel_roll_friction_factor 				= wheel_roll_friction_factor_COMMON,
 		wheel_glide_friction_factor				= wheel_glide_friction_factor_COMMON,
-		wheel_damage_force_factor 				= 250.0,
+		wheel_damage_force_factor 				= 250.0*20,
 		wheel_damage_speed 						= 200.0, 
 		wheel_brake_moment_max 					= brake_moment_main,
 		wheel_moment_of_inertia 				= main_wheel_moment_of_inertia,
@@ -143,7 +143,7 @@ suspension =
 		damper_coeff 							= main_damper_coeff,
 
 		--damper_coeff = damper_coeff_main_wheel,
-		--arg_post = 5,
+		arg_post = 5,
 		arg_amortizer 							= 6,
 		arg_wheel_rotation 						= 103,
 		arg_wheel_yaw 							= -1,
@@ -170,7 +170,7 @@ suspension =
 		amortizer_spring_force_factor_rate 		= main_amortizer_spring_force_factor_rate,
 		
 		amortizer_static_force 					= main_amortizer_static_force,
-		amortizer_direct_damper_force_factor 	= main_amortizer_direct_damper_force_factor/2.0,
+		amortizer_direct_damper_force_factor 	= main_amortizer_direct_damper_force_factor, --/2.0,
 		amortizer_back_damper_force_factor 		= main_amortizer_back_damper_force_factor,
 		
 		wheel_radius 							= 0.609,
@@ -178,7 +178,7 @@ suspension =
 		wheel_side_friction_factor 				= wheel_side_friction_factor_COMMON,
 		wheel_roll_friction_factor 				= wheel_roll_friction_factor_COMMON,
 		wheel_glide_friction_factor 			= wheel_glide_friction_factor_COMMON,
-		wheel_damage_force_factor 				= 250.0,
+		wheel_damage_force_factor 				= 250.0*20,
 		wheel_damage_speed 						= 200.0, 
 		wheel_brake_moment_max 					= brake_moment_main,
 		wheel_moment_of_inertia 				= main_wheel_moment_of_inertia,
@@ -188,7 +188,7 @@ suspension =
 		damper_coeff 							= main_damper_coeff,
 
 		--damper_coeff = damper_coeff_main_wheel,
-		--arg_post = 3,
+		arg_post = 3,
 		arg_amortizer 							= 4,
 		arg_wheel_rotation 						= 102,
 		arg_wheel_yaw 							= -1,
