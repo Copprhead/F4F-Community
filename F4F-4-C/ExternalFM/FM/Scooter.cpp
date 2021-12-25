@@ -468,6 +468,15 @@ void ed_fm_set_command
 		s_input->gear() = std::max(gearState, 0.0);
 		LOG("GEAR_UP\n");
 		break;
+	case Scooter::Control::HOOK_DOWN:
+		s_input->hook() = true;
+		LOG("HOOK_DOWN\n");
+		break;
+	case Scooter::Control::HOOK_UP:
+		s_input->hook() = false;
+		LOG("HOOK_UP\n");
+		break;
+
 
 	case Scooter::Control::PITCH:
 		s_input->pitch( value );
@@ -721,9 +730,12 @@ void ed_fm_set_draw_args (EdDrawArgument * drawargs,size_t size)
 	drawargs[LEFT_SLAT].f = s_airframe->getSlatLPosition();
 	drawargs[RIGHT_SLAT].f = s_airframe->getSlatRPosition();
 
-	drawargs[AIRBRAKE].f = s_airframe->getSpeedBrakePosition();
+	// Hook
+	drawargs[HOOK].f = s_airframe->getHookPosition();
 
-	//drawargs[HOOK].f = 1.0;//s_airframe->getHookPosition();
+
+
+	drawargs[AIRBRAKE].f = s_airframe->getSpeedBrakePosition();	
 
 	drawargs[STABILIZER_TRIM].f = s_airframe->getStabilizerAnim();
 

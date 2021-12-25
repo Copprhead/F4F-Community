@@ -386,8 +386,8 @@ private:
 
 	const double m_foldingWingExtendTime = 15;
 	const double m_gearExtendTime = 10;
-	const double m_flapDownTime = 3;
-	const double m_flapUpTime = 5;
+	const double m_flapDownTime = 1.5;
+	const double m_flapUpTime = 3;
 
 	//Airframe Variables
 	double m_gearLPosition = 0.0; //0 -> 1

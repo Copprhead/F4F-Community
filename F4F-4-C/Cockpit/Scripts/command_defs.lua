@@ -11,12 +11,17 @@ Keys =
 	GearUp = 430,
 	GearDown = 431,
 
+	HookUp = 3001,
+	HookDown = 3002,
+
 	Canopy = 71,
 	FoldWings = 968,
 	UnfoldWings = 969,
+
+	
 }
 
-start_command   = 3000
+start_command   = 3002
 device_commands =
 {
 	Button_1  = start_command + 1;

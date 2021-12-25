@@ -22,6 +22,9 @@ join(res.keyCommands,{
     {combos = {{key = 'F', reformers = {'LShift'}}}, down = Keys.FlapsUp, name = _('Flaps Up'), category = {_('Left Console')}},
     {combos = {{key = 'F', reformers = {'LCtrl'}}}, down = Keys.FlapsDown, name = _('Flaps Down'), category = {_('Left Console')}},
    
+    {combos = {{key = 'T', reformers = {'LShift'}}}, down = Keys.HookUp, name = _('Hook Up'), category = {_('Left Console')}},
+    {combos = {{key = 'T', reformers = {'LCtrl'}}}, down = Keys.HookDown, name = _('Hook Down'), category = {_('Left Console')}},
+
     ---------------------------------------------
     -- Communitcations -------------------------
     --------------------------------------------- 

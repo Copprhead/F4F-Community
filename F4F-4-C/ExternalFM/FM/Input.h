@@ -82,6 +82,9 @@ enum Control
 
 	FOLD_WINGS = 968,
 	UNFOLD_WINGS = 969,
+
+	HOOK_UP = 3001,
+	HOOK_DOWN = 3002,
 };
 
 class Input : public BaseComponent
