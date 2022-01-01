@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-01T13:54:30.490Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="vEmBhBvdx7prgUFVppHj" version="16.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-01T13:57:19.748Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="gbiwhNtwC4tQp6BxSaj-" version="16.1.2" type="github">
   <diagram id="ayrWfxRkvkhZxIaLV-r1" name="Page-1">
     <mxGraphModel dx="3999" dy="2932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -879,6 +879,9 @@
         </mxCell>
         <mxCell id="BIoIZSFnLaRXP3XJdqJq-187" value="&lt;span&gt;Many more 1d, 2d and 3d coefficient classes must be defined here.&amp;nbsp;&lt;br&gt;Every coefficient know its axis and how to call the getCoefficient() method (i.e. which paramater must be passed) and also if any scale factors need to be multiplied.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1900" y="170" width="430" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BIoIZSFnLaRXP3XJdqJq-193" value="Simply calls the calculate method of all coefficients. Not sure if splitting into different axis is useful. Might just call them in any order and add the result to the corresponding axis.&amp;nbsp;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="-230" width="160" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
